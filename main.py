@@ -1,5 +1,6 @@
 import re
 import logging
+from collections import Counter
 
 pattern = re.compile(
     r"(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) "
@@ -27,3 +28,6 @@ def parse_file(filepath: str) -> list[dict]:
     except FileNotFoundError:
         logging.warning("File not found: %s", filepath)
         return []
+
+def count_by_level(entries: list[dict]) -> Counter:
+    return Counter(entry["level"] for entry in entries)
