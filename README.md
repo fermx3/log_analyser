@@ -9,7 +9,7 @@ Python 3.10+ (no external dependencies)
 
 ## Installation
 1. Clone the repository
-    git clone https://github.com/tu-usuario/log-analyzer.git
+    git clone https://github.com/fermx3/log_analyser.git
 
 2. Navigate to the project folder
     cd log-analyzer
