@@ -15,6 +15,9 @@ def main():
     args = parser.parse_args()
 
     parsed_file = parse_file(args.filepath)
+    if not parsed_file:
+        return
+
     counted_types = count_by_level(parsed_file)
     counted_errors = most_frequent_errors(parsed_file)
 
